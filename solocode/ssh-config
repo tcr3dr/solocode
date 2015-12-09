@@ -6,4 +6,4 @@ Host solo 10.1.1.10
     UserKnownHostsFile=/dev/null
     ControlPath ~/.ssh/solocode-master
     ControlMaster auto
-    ControlPersist 600
+    ControlPersist 15

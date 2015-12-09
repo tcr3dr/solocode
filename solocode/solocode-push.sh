@@ -4,6 +4,7 @@ set -e
 
 SSH_CONFIG=$(dirname $0)/ssh-config
 
+echo 'Checking if code is up to date...'
 SOURCE_MD5="$(ssh -F $SSH_CONFIG solo -t "md5sum /tmp/solocode.tar.gz | awk '{ print \$1 }'" | tr -d '\r\n')"
 LOCAL_MD5="$(md5sum solocode.tar.gz | awk '{ print $1 }' | tr -d '\r\n')"
 
